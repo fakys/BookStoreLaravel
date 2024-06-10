@@ -1,1 +1,6 @@
-@extends('admin.layouts')
+@extends('admin.layouts.base')
+
+
+@section('content')
+    dsadasdas
+@endsection

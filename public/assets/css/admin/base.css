@@ -1,0 +1,17 @@
+:root{
+    --c-main-b:#26a9e0;
+}
+.main-header{
+    background: var(--c-main-b);
+    padding: 5px 5%;
+    display: flex;
+}
+.main-logo-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-logo-link img{
+    width: 60px;
+}
