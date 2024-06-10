@@ -10,4 +10,6 @@ class Category extends Model
     use HasFactory;
 
     public $table = 'categories';
+    public static string $name_table = 'Категории';
+    public static string $name_model = 'Категория';
 }

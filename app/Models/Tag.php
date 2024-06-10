@@ -9,4 +9,7 @@ class Tag extends Model
 {
     use HasFactory;
     public $table='tags';
+    public static string $name_table = 'Теги';
+    public static string $name_model = 'Тег';
+
 }

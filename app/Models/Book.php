@@ -10,4 +10,6 @@ class Book extends Model
     use HasFactory;
 
     public $table = 'books';
+    public static string $name_table = 'Книги';
+    public static string $name_model = 'Книга';
 }

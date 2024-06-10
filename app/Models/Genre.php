@@ -10,5 +10,7 @@ class Genre extends Model
     use HasFactory;
 
     public $table="genres";
+    public static string $name_table = 'Жанры';
+    public static string $name_model = 'Жанр';
 
 }

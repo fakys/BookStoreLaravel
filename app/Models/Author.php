@@ -10,4 +10,6 @@ class Author extends Model
     use HasFactory;
 
     public $table = 'authors';
+    public static string $name_table = 'Авторы';
+    public static string $name_model = 'Автор';
 }
