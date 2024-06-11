@@ -6,6 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="{{asset('assets/css/admin/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/admin/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/admin/base.css')}}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -15,13 +16,12 @@
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                <div class="nav-link pushmenu" data-widget="pushmenu" role="button">
+                    <i class="fas fa-bars"></i>
+                </div>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
+                <a href="#" class="nav-link">Главная</a>
             </li>
         </ul>
 
@@ -33,7 +33,7 @@
                 <div class="navbar-search-block">
                     <form class="form-inline">
                         <div class="input-group input-group-sm">
-                            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                            <input class="form-control form-control-navbar" type="search" placeholder="Поиск" aria-label="Search">
                             <div class="input-group-append">
                                 <button class="btn btn-navbar" type="submit">
                                     <i class="fas fa-search"></i>
@@ -77,29 +77,44 @@
     </nav>
 
     {{--!!!!! user ava--}}
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <a href="#" class="brand-link">
-            <img src="#" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
-        </a>
+    <aside class="main-sidebar sidebar-primary elevation-4">
+        <div class="brand-link-container">
+            <a href="#" class="brand-link-logo">
+                <img src="{{asset('assets/img/white-logo.png')}}" class="site-logo">
+            </a>
+        </div>
         <div class="sidebar">
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
                     <img src="#" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Alexander Pierce</a>
+                    <a href="#" class="d-block">###</a>
                 </div>
             </div>
             <div class="form-inline">
                 <div class="input-group" data-widget="sidebar-search">
-                    <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control form-control-sidebar sidebar-search-input" type="search" placeholder="Поиск" aria-label="Search">
                     <div class="input-group-append">
-                        <button class="btn btn-sidebar">
+                        <button class="btn btn-sidebar btn-white">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </div>
+            </div>
+            <div>
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    {{--                    !!!FOR--}}
+                    <li class="nav-item">
+                        <a href="#" class="nav-link admin-nav-link">
+                            <i class="nav-icon fas fa-address-book"></i>
+                            <p>
+                                Gallery
+                            </p>
+                        </a>
+                    </li>
+                    {{--                    !!!ENDFOR--}}
+                </ul>
             </div>
         </div>
     </aside>
@@ -109,12 +124,11 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Dashboard</h1>
+                        <h1 class="m-0">Title</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v1</li>
+                            <li class="breadcrumb-item active">Главная</li>
                         </ol>
                     </div>
                 </div>
@@ -125,10 +139,9 @@
         </section>
     </div>
     <footer class="main-footer">
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-        All rights reserved.
+        <strong>BookStore &copy; 2014-2024.</strong>
         <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 3.2.0
+            <b>Version</b> 1.0
         </div>
     </footer>
 </div>
