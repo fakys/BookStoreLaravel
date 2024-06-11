@@ -135,7 +135,7 @@
             </div>
         </div>
         <section class="content">
-
+            @yield('content')
         </section>
     </div>
     <footer class="main-footer">

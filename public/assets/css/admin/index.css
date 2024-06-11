@@ -1,0 +1,14 @@
+.table-index{
+
+}
+.add-btn-table img{
+    cursor: pointer;
+    width: 30px;
+}
+.add-btn-table{
+    display: flex;
+    justify-content: center;
+}
+.table-index th, .table-index td{
+    text-align: center;
+}
