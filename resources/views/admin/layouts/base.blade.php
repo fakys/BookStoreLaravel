@@ -103,18 +103,7 @@
                 </div>
             </div>
             <div>
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                    {{--                    !!!FOR--}}
-                    <li class="nav-item">
-                        <a href="#" class="nav-link admin-nav-link">
-                            <i class="nav-icon fas fa-address-book"></i>
-                            <p>
-                                Gallery
-                            </p>
-                        </a>
-                    </li>
-                    {{--                    !!!ENDFOR--}}
-                </ul>
+                <x-admin-sidebar-component/>
             </div>
         </div>
     </aside>
