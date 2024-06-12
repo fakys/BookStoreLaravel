@@ -12,12 +12,10 @@
     <link rel="stylesheet" href="{{asset('assets/css/admin/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/admin/adminlte.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/admin/base.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/admin/style.css')}}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="{{asset('assets/img/blue-logo.png')}}" alt="AdminLTELogo" width="200">
-    </div>
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -26,7 +24,7 @@
                 </div>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Главная</a>
+                <a href="{{route('admin.home')}}" class="nav-link">Главная</a>
             </li>
         </ul>
 
@@ -84,7 +82,7 @@
     {{--!!!!! user ava--}}
     <aside class="main-sidebar sidebar-primary elevation-4">
         <div class="brand-link-container">
-            <a href="#" class="brand-link-logo">
+            <a href="{{route('admin.home')}}" class="brand-link-logo">
                 <img src="{{asset('assets/img/white-logo.png')}}" class="site-logo">
             </a>
         </div>

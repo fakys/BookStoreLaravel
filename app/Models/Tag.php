@@ -12,4 +12,9 @@ class Tag extends Model
     public static string $name_table = 'Теги';
     public static string $name_model = 'Тег';
 
+    public static function get_name_table():string
+    {
+        return 'tags';
+    }
+
 }

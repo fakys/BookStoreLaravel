@@ -12,4 +12,9 @@ class Author extends Model
     public $table = 'authors';
     public static string $name_table = 'Авторы';
     public static string $name_model = 'Автор';
+
+    public static function get_name_table():string
+    {
+        return 'authors';
+    }
 }

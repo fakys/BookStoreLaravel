@@ -12,4 +12,9 @@ class Category extends Model
     public $table = 'categories';
     public static string $name_table = 'Категории';
     public static string $name_model = 'Категория';
+
+    public static function get_name_table():string
+    {
+        return 'categories';
+    }
 }

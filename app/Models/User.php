@@ -48,4 +48,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public static function get_name_table():string
+    {
+        return 'users';
+    }
 }

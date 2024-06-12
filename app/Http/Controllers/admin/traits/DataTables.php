@@ -10,7 +10,7 @@ use App\Models\UserGroup;
 
 trait DataTables
 {
-    protected array $data_table = [
+    protected array $data_tables = [
         1=>Book::class,
         2=>Genre::class,
         3=>Category::class,

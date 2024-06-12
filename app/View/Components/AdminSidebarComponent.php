@@ -21,6 +21,6 @@ class AdminSidebarComponent extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin-sidebar-component', ['data_model'=>$this->data_table]);
+        return view('components.admin-sidebar-component', ['data_model'=>$this->data_tables]);
     }
 }
