@@ -26,4 +26,14 @@ class AdminController extends Controller
         $data_model = DB::table($table)->select($column)->get()->toArray();
         return view('admin.show_model', ['data_model'=>$data_model, 'column'=>$column]);
     }
+
+    public function add_object($table)
+    {
+        if(Schema::hasTable($table)){
+
+        }else{
+            abort(404);
+        }
+        return view('admin.add_object', ['table'=>$table]);
+    }
 }

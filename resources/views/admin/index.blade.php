@@ -19,11 +19,11 @@
             @foreach($data_tables as $key=>$val)
                 <tr>
                     <th>{{$key}}</th>
-                    <th><a href="{{route('admin.show_model', ['table'=>$val::get_name_table()])}}">{{$val::$name_table}}</a></th>
+                    <th><a href="{{route('admin.show_model', ['table'=>$val::get_name_table()])}}">{{Str::limit($val::$name_table, 20)}}</a></th>
                     <th>{{$val::get_name_table()}}</th>
                     <td>
                         <div class="add-btn-table">
-                            <a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                            <a href="{{route('admin.add_object', ['table'=>$val::get_name_table()])}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                         </div>
                     </td>
                 </tr>
