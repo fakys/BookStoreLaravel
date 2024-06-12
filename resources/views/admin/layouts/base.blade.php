@@ -3,7 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <link rel="shortcut icon" href="{{asset('assets/img/site-header-logo.png')}}" />
+    @if(isset($title))
+        <title>{{$title}}</title>
+    @else
+        <title>BookStore</title>
+    @endif
     <link rel="stylesheet" href="{{asset('assets/css/admin/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/admin/adminlte.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/admin/base.css')}}">
@@ -113,12 +118,9 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Title</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item active">Главная</li>
-                        </ol>
+                        @if(isset($title))
+                        <h1 class="m-0">{{$title}}</h1>
+                        @endif
                     </div>
                 </div>
             </div>

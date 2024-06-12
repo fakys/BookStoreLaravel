@@ -10,6 +10,6 @@ class AdminController extends Controller
     use DataTables;
     public function index()
     {
-        return view('admin.index', ['data_table'=>$this->data_table]);
+        return view('admin.index', ['data_table'=>$this->data_table, 'title'=>'Админ панель']);
     }
 }
