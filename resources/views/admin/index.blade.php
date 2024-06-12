@@ -9,9 +9,7 @@
             <thead class="table-hover table-primary">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Название</th>
                 <th scope="col">Добавить</th>
             </tr>
             </thead>
@@ -19,9 +17,7 @@
             @foreach($data_table as $key=>$val)
                 <tr>
                     <th>{{$key}}</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th>{{$val::$name_table}}</th>
                     <td>
                         <div class="add-btn-table">
                             <img src="{{asset('assets/img/add-button.png')}}">
