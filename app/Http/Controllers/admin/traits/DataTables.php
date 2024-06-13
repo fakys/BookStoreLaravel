@@ -11,12 +11,12 @@ use App\Models\UserGroup;
 trait DataTables
 {
     protected array $data_tables = [
-        1=>Book::class,
-        2=>Genre::class,
-        3=>Category::class,
-        4=>Tag::class,
-        5=>Author::class,
-        6=>User::class,
-        7=>UserGroup::class
+        'books'=>Book::class,
+        'genres'=>Genre::class,
+        'categories'=>Category::class,
+        'tags'=>Tag::class,
+        'authors'=>Author::class,
+        'users'=>User::class,
+        'users_groups'=>UserGroup::class
     ];
 }

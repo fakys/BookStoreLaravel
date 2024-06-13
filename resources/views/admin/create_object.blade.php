@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="container">
-        <form method="post" action="{{route('admin.add_object', ['table'=>$table])}}">
+        <form method="post" action="{{route('admin.store_object', ['table'=>$table])}}">
+            @csrf
         @if($table == 'users')
             <x-users-form-component/>
         @elseif($table =='categories')

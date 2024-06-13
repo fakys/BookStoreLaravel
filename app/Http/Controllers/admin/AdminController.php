@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\admin\traits\DataTables;
 use App\Http\Controllers\Controller;
+use http\Env\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use function Termwind\render;
@@ -27,13 +28,17 @@ class AdminController extends Controller
         return view('admin.show_model', ['data_model'=>$data_model, 'column'=>$column]);
     }
 
-    public function add_object($table)
-    {
-        if(Schema::hasTable($table)){
+    public function store_object($table){
+        if(request()->method() == 'POST'){
 
-        }else{
+        }
+    }
+
+    public function create_object($table)
+    {
+        if(!Schema::hasTable($table)){
             abort(404);
         }
-        return view('admin.add_object', ['table'=>$table]);
+        return view('admin.create_object', ['table'=>$table]);
     }
 }

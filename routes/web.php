@@ -8,7 +8,8 @@ Route::get('/', function () {
 });
 Route::get('admin/', [AdminController::class, 'index'])->name('admin.home');
 Route::get('admin/{table}', [AdminController::class, 'show_model'])->name('admin.show_model');
-Route::get('admin/add/{table}', [AdminController::class, 'add_object'])->name('admin.add_object');
+Route::get('admin/create/{table}', [AdminController::class, 'create_object'])->name('admin.create_object');
+Route::post('admin/store/{table}', [AdminController::class, 'store_object'])->name('admin.store_object');
 
 Auth::routes();
 

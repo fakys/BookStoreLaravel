@@ -9,7 +9,6 @@
         <table class="table table-index">
             <thead class="table-hover table-primary">
             <tr>
-                <th scope="col">#</th>
                 <th scope="col">Название</th>
                 <th scope="col">Название таблицы</th>
                 <th scope="col">Добавить</th>
@@ -18,12 +17,11 @@
             <tbody>
             @foreach($data_tables as $key=>$val)
                 <tr>
-                    <th>{{$key}}</th>
-                    <th><a href="{{route('admin.show_model', ['table'=>$val::get_name_table()])}}">{{Str::limit($val::$name_table, 20)}}</a></th>
+                    <th><a href="{{route('admin.show_model', ['table'=>$key])}}">{{Str::limit($val::$name_table, 20)}}</a></th>
                     <th>{{$val::get_name_table()}}</th>
                     <td>
                         <div class="add-btn-table">
-                            <a href="{{route('admin.add_object', ['table'=>$val::get_name_table()])}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                            <a href="{{route('admin.create_object', ['table'=>$key])}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                         </div>
                     </td>
                 </tr>
