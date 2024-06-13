@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <div><a href="{{route('admin.create_object', ['table'=>$table])}}" class="btn btn-success p-1 mb-2">Добавить</a></div>
         <table class="table table-index">
             <thead class="table-hover table-primary">
             <tr>

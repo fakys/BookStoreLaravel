@@ -26,7 +26,7 @@ class AdminController extends Controller
         $model = $this->data_tables[$table];
         $column = array_slice(Schema::getColumnListing($table), 0, 3);
         $data_model = $model::all($column)->toArray();
-        return view('admin.show_model', ['data_model'=>$data_model, 'column'=>$column]);
+        return view('admin.show_model', ['table'=>$table,'data_model'=>$data_model, 'column'=>$column, 'title'=>$model::$name_table]);
     }
 
     public function store_object($table)
@@ -41,6 +41,7 @@ class AdminController extends Controller
                 return redirect()->route('admin.show_model', ['table'=>$table]);
             }
         }
+        abort(404);
     }
 
     public function create_object($table)
@@ -48,6 +49,7 @@ class AdminController extends Controller
         if(empty($this->data_tables[$table])){
             abort(404);
         }
-        return view('admin.create_object', ['table'=>$table]);
+        $name = $this->data_tables[$table]::$name_table;
+        return view('admin.create_object', ['table'=>$table, 'title'=>"Добавление в таблицу '$name'"]);
     }
 }
