@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('title')->unique();
             $table->text('description');
-            $table->integer('prise');
-            $table->string('main_photo');
-            $table->foreignIdFor(Author::class);
-            $table->foreignIdFor(Genre::class);
+            $table->integer('price');
+            $table->string('main_photo')->nullable();
+            $table->foreignIdFor(Author::class)->nullable();
+            $table->foreignIdFor(Genre::class)->nullable();
             $table->timestamps();
         });
     }
