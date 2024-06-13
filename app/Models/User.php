@@ -24,6 +24,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'avatar',
+        'user_group_id'
     ];
 
     /**
@@ -49,8 +51,24 @@ class User extends Authenticatable
         ];
     }
 
-    protected static function cre()
+    public static function boot(): void
     {
-
+     parent::boot();
+     static::creating(function ($user){
+         $user->avatar = self::AddAvatar();
+     });
     }
+
+    private static function AddAvatar(): string
+    {
+        $ava = request()->file('avatar');
+        if($ava){
+            $path = $ava->store('image/users_ava', 'public');
+            if($path){
+                return $path;
+            }
+        }
+        return 'image/users_ava/default/default_user_ava.jpg';
+    }
+
 }

@@ -13,4 +13,9 @@ class Genre extends Model
     public static string $name_table = 'Жанры';
     public static string $name_model = 'Жанр';
 
+    protected $fillable = [
+        'name',
+        'category_id'
+    ];
+
 }

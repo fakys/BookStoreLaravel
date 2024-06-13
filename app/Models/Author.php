@@ -12,4 +12,9 @@ class Author extends Model
     public $table = 'authors';
     public static string $name_table = 'Авторы';
     public static string $name_model = 'Автор';
+
+    protected $fillable=[
+        'name',
+        'user_id'
+    ];
 }

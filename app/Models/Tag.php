@@ -12,4 +12,8 @@ class Tag extends Model
     public static string $name_table = 'Теги';
     public static string $name_model = 'Тег';
 
+    protected $fillable=[
+        'name'
+    ];
+
 }

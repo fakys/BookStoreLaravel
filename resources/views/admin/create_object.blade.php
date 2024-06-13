@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form method="post" action="{{route('admin.store_object', ['table'=>$table])}}">
+        <form method="post" action="{{route('admin.store_object', ['table'=>$table])}}" enctype="multipart/form-data">
             @csrf
         @if($table == 'users')
             <x-users-form-component/>

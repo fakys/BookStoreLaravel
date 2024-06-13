@@ -13,4 +13,8 @@ class UserGroup extends Model
     public static string $name_table = 'Группы пользователей';
     public static string $name_model = 'Группа пользователя';
 
+    protected $fillable=[
+        'name'
+    ];
+
 }

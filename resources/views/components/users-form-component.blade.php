@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             <label>Пароль</label>
-            <input type="password" class="form-control" placeholder="Введите пароль">
+            <input type="password" name="password" class="form-control" placeholder="Введите пароль">
         </div>
         <div class="form-group">
             <label>Повторите пароль</label>
