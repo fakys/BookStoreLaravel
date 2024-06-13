@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         @if($table = 'users')
-            <x-add-user-component/>
+            <x-user-form-components/>
         @endif
     </div>
 @endsection

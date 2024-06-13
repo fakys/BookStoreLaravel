@@ -4,25 +4,25 @@ namespace App\View\Components;
 
 use App\Models\UserGroup;
 use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
-class AddUserComponent extends Component
+class UserFormComponents extends Component
 {
-    public $groups;
+    /**
+     * Create a new component instance.
+     */
     public function __construct()
     {
-        $this->add_groups();
+        //
     }
-    protected function add_groups()
-    {
-        $this->groups = UserGroup::all();
-    }
+
     /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string
     {
-        return view('components.add-user-component', ['groups'=>$this->groups]);
+        $group  = UserGroup::all();
+        return view('components.user-form-components', compact('group'));
     }
 }
