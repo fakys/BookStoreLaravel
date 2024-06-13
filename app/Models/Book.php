@@ -13,9 +13,4 @@ class Book extends Model
 
     public static string $name_table = 'Книги';
     public static string $name_model = 'Книга';
-
-    public static function get_name_table():string
-    {
-        return 'books';
-    }
 }

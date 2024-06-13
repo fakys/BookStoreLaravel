@@ -49,8 +49,8 @@ class User extends Authenticatable
         ];
     }
 
-    public static function get_name_table():string
+    protected static function cre()
     {
-        return 'users';
+
     }
 }

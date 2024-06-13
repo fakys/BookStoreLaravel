@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use http\Env\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Psy\Shell;
 use function Termwind\render;
 
 class AdminController extends Controller
@@ -19,24 +20,32 @@ class AdminController extends Controller
 
     public function show_model($table)
     {
-        if(Schema::hasTable($table)){
-            $column = array_slice(Schema::getColumnListing($table), 0, 3);
-        }else{
+        if(empty($this->data_tables[$table])){
             abort(404);
         }
-        $data_model = DB::table($table)->select($column)->get()->toArray();
+        $model = $this->data_tables[$table];
+        $column = array_slice(Schema::getColumnListing($table), 0, 3);
+        $data_model = $model::all($column)->toArray();
         return view('admin.show_model', ['data_model'=>$data_model, 'column'=>$column]);
     }
 
-    public function store_object($table){
+    public function store_object($table)
+    {
+        if(empty($this->data_tables[$table])){
+            abort(404);
+        }
+        $model = $this->data_tables[$table];
         if(request()->method() == 'POST'){
-
+            $new_object = new $model(request()->post());
+            if($new_object->save()){
+                return redirect()->route('admin.show_model', ['table'=>$table]);
+            }
         }
     }
 
     public function create_object($table)
     {
-        if(!Schema::hasTable($table)){
+        if(empty($this->data_tables[$table])){
             abort(404);
         }
         return view('admin.create_object', ['table'=>$table]);

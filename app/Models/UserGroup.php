@@ -13,9 +13,4 @@ class UserGroup extends Model
     public static string $name_table = 'Группы пользователей';
     public static string $name_model = 'Группа пользователя';
 
-    public static function get_name_table():string
-    {
-        return 'users_groups';
-    }
-
 }

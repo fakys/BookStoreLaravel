@@ -13,10 +13,4 @@ class Genre extends Model
     public static string $name_table = 'Жанры';
     public static string $name_model = 'Жанр';
 
-
-    public static function get_name_table():string
-    {
-        return 'genres';
-    }
-
 }

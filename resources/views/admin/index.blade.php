@@ -18,7 +18,7 @@
             @foreach($data_tables as $key=>$val)
                 <tr>
                     <th><a href="{{route('admin.show_model', ['table'=>$key])}}">{{Str::limit($val::$name_table, 20)}}</a></th>
-                    <th>{{$val::get_name_table()}}</th>
+                    <th>{{$key}}</th>
                     <td>
                         <div class="add-btn-table">
                             <a href="{{route('admin.create_object', ['table'=>$key])}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
